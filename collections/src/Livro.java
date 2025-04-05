@@ -1,12 +1,7 @@
-package list.Pesquisa;
-
 import java.util.Comparator;
 
 public class Livro implements Comparable<Livro> {
-
-    //atributos
     private String titulo;
-    /*private String titulo;
     private  String autor;
     private int ano;
 
@@ -47,10 +42,10 @@ public class Livro implements Comparable<Livro> {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
-    }*/
+    }
 
 }
-/*
+
 //Classe para comparar livro por autor
 class CompararAutor implements Comparator<Livro> {
 
@@ -91,6 +86,4 @@ class CompararAnoAutorTitulo implements Comparator<Livro> {
         }
         return l1.getTitulo().compareTo(l2.getTitulo());
     }
-
-
-}*/
+}

@@ -3,11 +3,11 @@ package list.Pesquisa;
 import java.util.ArrayList;
 import  java.util.List;
 
-public class CatalagoLivro {
+public class CatalagoLivros {
     //atributo
     private List<Livro> livroList;
 
-    public CatalagoLivro() {
+    public CatalagoLivros() {
         this.livroList = new ArrayList<>();
     }
 
@@ -39,6 +39,7 @@ public class CatalagoLivro {
         return  livrosPorIntervaloAnos;
     }
 
+    //Retorna o primiero livro que achar com esse título
     public Livro pesquisarPorTitulo(String titulo) {
         Livro livroPorTitulo = null;
         if (!livroList.isEmpty()) {
@@ -50,5 +51,19 @@ public class CatalagoLivro {
             }
         }
         return livroPorTitulo;
+    }
+
+    public static void main(String[] args) {
+        CatalagoLivros catalagoLivros = new CatalagoLivros();
+        catalagoLivros.adicionarLivro("Livro 1", "Autor 1", 2021);
+        catalagoLivros.adicionarLivro("Livro 1", "Autor 2", 2020);
+        catalagoLivros.adicionarLivro("Livro 2", "Autor 2", 2022);
+        catalagoLivros.adicionarLivro("Livro 3", "Autor 3", 2023);
+        catalagoLivros.adicionarLivro("Livro 4", "Autor 4", 1994);
+
+        System.out.println(catalagoLivros.pesquisarPorAutor("Autor 2"));
+        System.out.println(catalagoLivros.pesquisarPorIntervaloAno(2020, 2022));
+        System.out.println(catalagoLivros.pesquisarPorTitulo("Livro 1"));
+
     }
 }

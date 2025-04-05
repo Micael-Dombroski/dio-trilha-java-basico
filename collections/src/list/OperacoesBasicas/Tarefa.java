@@ -1,6 +1,6 @@
 package list.OperacoesBasicas;
 
-public class ListaTarefas {
+public class Tarefa {
     //atributo
     private String descricao;
 
@@ -12,4 +12,10 @@ public class ListaTarefas {
         return descricao;
     }
 
+    @Override
+    public String toString() {
+        return "Tarefa{" +
+                "descricao='" + descricao + '\'' +
+                '}';
+    }
 }
